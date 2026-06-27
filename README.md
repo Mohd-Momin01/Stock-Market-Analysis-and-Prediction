@@ -54,6 +54,17 @@ The objective of this project is to demonstrate practical Data Analytics skills 
 * Investment Disclaimer
 
 ---
+# 📷 Dashboard Preview
+![Home Dashboard](images/home-dashboard.png)
+
+```
+Home Dashboard
+Stock Analysis
+
+Stock Prediction
+```
+
+---
 
 ## 🤖 Stock Prediction
 
@@ -81,26 +92,6 @@ The objective of this project is to demonstrate practical Data Analytics skills 
 | Plotly                   | Interactive Charts       |
 | Yahoo Finance (yfinance) | Live Stock Data          |
 | Scikit-Learn             | Machine Learning         |
-
----
-
-# 📂 Project Structure
-
-```text
-Stock-Market-Analysis-and-Prediction/
-
-│
-├── Trading_app.py
-│
-├── pages/
-│   ├── Stock_Analysis.py
-│   └── Stock_Prediction.py
-│
-├── app.png
-├── README.md
-├── requirements.txt
-└── .gitignore
-```
 
 ---
 
@@ -132,6 +123,107 @@ Prediction Dashboard
 ```
 
 ---
+## 📥. Data Collection
+
+Historical stock market data is collected using the Yahoo Finance API.
+
+```python
+stock = yf.Ticker(ticker)
+history = stock.history(start=start_date, end=end_date)
+```
+## 🏢 Company Information
+
+Company details are fetched directly from Yahoo Finance.
+
+```python
+info = stock.info
+company = info.get("longName")
+industry = info.get("industry")
+market_cap = info.get("marketCap")
+```
+## ⚙ Feature Engineering
+
+The Date column is converted into numerical values before training the model.
+
+```python
+history["Day"] = np.arange(len(history))
+```
+## 🤖 Model Training
+
+Linear Regression is used for price forecasting.
+
+```python
+model = LinearRegression()
+
+model.fit(X, y)
+```
+## 📈 Future Prediction
+
+```python
+future_predictions = model.predict(future_days)
+```
+## 📊 Interactive Visualization
+
+```python
+fig.add_trace(
+    go.Scatter(
+        x=history["Date"],
+        y=history["Close"]
+    )
+)
+```
+## 🛡 Risk Analysis
+
+```python
+if beta >= 1.2:
+    st.error("High Risk")
+elif beta >= 0.8:
+    st.warning("Moderate Risk")
+else:
+    st.success("Low Risk")
+```
+## 🌍 Automatic Currency Detection
+
+```python
+if ticker.endswith(".NS"):
+    currency_symbol = "₹"
+else:
+    currency_symbol = "$"
+```
+## 💡 Investment Recommendation
+
+```python
+if change_percent >= 10:
+    recommendation = "BUY"
+elif change_percent >= 5:
+    recommendation = "ACCUMULATE"
+else:
+    recommendation = "HOLD"
+```
+## 🎨 Dashboard Layout
+
+```python
+col1, col2, col3 = st.columns(3)
+```
+
+# 📂 Project Structure
+
+```text
+Stock-Market-Analysis-and-Prediction/
+
+│
+├── Trading_app.py
+│
+├── pages/
+│   ├── Stock_Analysis.py
+│   └── Stock_Prediction.py
+│
+├── app.png
+├── README.md
+├── requirements.txt
+└── .gitignore
+```
+
 
 # 📊 Key Analysis Performed
 
@@ -178,20 +270,6 @@ Prediction Dashboard
 * Linear Regression
 * Price Prediction
 * Model Evaluation (R² Score)
-
----
-
-# 📷 Dashboard Preview
-
-> Add your project screenshots here.
-
-```
-Home Dashboard
-
-Stock Analysis
-
-Stock Prediction
-```
 
 ---
 
