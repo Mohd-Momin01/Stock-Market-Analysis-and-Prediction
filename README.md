@@ -1,3 +1,18 @@
+## 🚀 Live Application
+
+### 🌐 Launch the Dashboard
+
+👉 **Live Demo:**  
+https://stock-market-analysis-and-prediction-cozi96ayccrleaadtt8szv.streamlit.app/
+
+### 📊 Stock Analysis
+
+👉 https://stock-market-analysis-and-prediction-cozi96ayccrleaadtt8szv.streamlit.app/Stock_Analysis
+
+### 🤖 Stock Prediction
+
+👉 https://stock-market-analysis-and-prediction-cozi96ayccrleaadtt8szv.streamlit.app/Stock_Prediction
+
 # 📈 Stock Market Analysis & Prediction Dashboard
 
 An interactive **Data Analytics and Machine Learning** dashboard built with **Python** and **Streamlit** to analyze stock market data, visualize financial insights, and generate basic future price predictions.
