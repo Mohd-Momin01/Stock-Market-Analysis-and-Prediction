@@ -54,17 +54,16 @@ The objective of this project is to demonstrate practical Data Analytics skills 
 * Investment Disclaimer
 
 ---
-# 📷 Dashboard Preview
-![Home Dashboard](images/home-dashboard.png)
+# Home Dashboard
 
-```
-Home Dashboard
-Stock Analysis
+![Home Dashboard](Streamlit%20UI%20Images/Home%20DashBoard.png)
 
-Stock Prediction
-```
+# Stock Analysis
+![Stock Analysis](Streamlit%20UI%20Images/Stock%20Anaylsis%20DashBoard.png)
 
----
+# Stock Prediction
+
+![Stock Prediction](Streamlit%20UI%20Images/Stock%20Prediction%20DashBoard.png)
 
 ## 🤖 Stock Prediction
 
