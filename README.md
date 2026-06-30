@@ -3,7 +3,7 @@
 ### 🌐 Launch the Dashboard
 
 👉 **Live Demo:**  
-https://stock-market-analysis-and-prediction-cozi96ayccrleaadtt8szv.streamlit.app/
+[https://stock-market-analysis-and-prediction-cozi96ayccrleaadtt8szv.streamlit.app/](https://stock-market-analysis-and-prediction-madwiynkvdjyr3ezctvgdr.streamlit.app/)
 
 ### 📊 Stock Analysis
 
